@@ -46,7 +46,7 @@ export const jsRules = {
   'no-bitwise': 'error',
   'no-caller': 'error',
   'no-console': 'warn',
-  'no-empty-function': 'warn',
+  'no-empty-function': ['error', { allow: ['constructors'] }],
   'no-eq-null': 'error',
   'no-eval': 'error',
   'no-extend-native': 'error',

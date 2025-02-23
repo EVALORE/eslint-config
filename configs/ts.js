@@ -1,22 +1,23 @@
 import { tsRules } from '../rules/ts.js';
 import { supportedFileTypes } from '../utils/fileTypes.js';
 import tseslint from 'typescript-eslint';
-import eslint from '@eslint/js';
 
+/** @type {import('typescript-eslint').ConfigWithExtends} */
 export const tsConfig = {
   name: 'ts config',
   files: [supportedFileTypes.ts],
-  extends: [
-    eslint.configs.recommended,
-    tseslint.configs.strictTypeChecked,
-    tseslint.configs.stylisticTypeChecked,
-  ],
+  extends: [tseslint.configs.strictTypeChecked, tseslint.configs.stylisticTypeChecked],
 
   languageOptions: {
+    parser: tseslint.parser,
     parserOptions: {
       projectService: true,
       tsconfigRootDir: import.meta.dirname,
     },
+  },
+
+  plugins: {
+    '@typescript-eslint': tseslint.plugin,
   },
 
   rules: {

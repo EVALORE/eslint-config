@@ -1,5 +1,7 @@
 /** @type {import('eslint').Linter.RulesRecord} */
 export const tsRules = {
+  '@typescript-eslint/explicit-function-return-type': 'error',
+  
   '@typescript-eslint/explicit-module-boundary-types': 'error',
   '@typescript-eslint/method-signature-style': 'error',
   '@typescript-eslint/no-use-before-define': 'error',
