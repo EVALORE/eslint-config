@@ -1,6 +1,6 @@
 {
   "name": "@evalore/eslint-config",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "eslint configs for javascript, typescript and angular",
   "main": "index.js",
   "type": "module",
