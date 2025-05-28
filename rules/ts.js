@@ -16,4 +16,5 @@ export const tsRules = {
   '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
   '@typescript-eslint/member-ordering': ['error', { default: ['field', 'constructor', 'method'] }],
   '@typescript-eslint/no-shadow': 'error',
+  '@typescript-eslint/no-extraneous-class': ['error', { allowWithDecorator: true }],
 };

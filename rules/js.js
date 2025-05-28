@@ -16,7 +16,7 @@ export const jsRules = {
 
   'accessor-pairs': 'error',
   'block-scoped-var': 'error',
-  'class-methods-use-this': 'error',
+  'class-methods-use-this': 'off',
   complexity: ['error', 5],
   'consistent-return': 'error',
   'default-case': 'error',
@@ -64,6 +64,7 @@ export const jsRules = {
   'no-object-constructor': 'error',
   'no-octal-escape': 'error',
   'no-proto': 'error',
+  'no-unused-private-class-members': 'off',
   'no-restricted-exports': ['error', { restrictDefaultExports: { direct: true } }],
 
   'no-restricted-globals': [
@@ -191,7 +192,7 @@ export const jsRulesFrozen = {
   'id-match': 'error',
   'id-denylist': 'error',
 
-  'init-declarations': 'error',
+  'init-declarations': 'off',
   'logical-assignment-operators': 'error',
   'no-continue': 'error',
   'no-div-regex': 'error',
@@ -202,7 +203,10 @@ export const jsRulesFrozen = {
   'no-inline-comments': 'error',
   'no-label-var': 'error',
   'no-lonely-if': 'error',
-  'no-magic-numbers': 'error',
+  'no-magic-numbers': [
+    'warn',
+    { enforceConst: true, ignoreClassFieldInitialValues: true, ignoreArrayIndexes: true },
+  ],
   'no-multi-str': 'error',
   'no-negated-condition': 'error',
   'no-nested-ternary': 'error',
@@ -214,7 +218,7 @@ export const jsRulesFrozen = {
   'no-unneeded-ternary': ['error', { defaultAssignment: false }],
   'no-useless-computed-key': 'error',
   'no-useless-concat': 'error',
-  'no-void': 'error',
+  'no-void': ['error', { allowAsStatement: true }],
   'no-warning-comments': 'error',
   'object-shorthand': 'error',
   'operator-assignment': 'error',
